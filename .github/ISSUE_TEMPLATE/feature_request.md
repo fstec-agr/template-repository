@@ -6,7 +6,10 @@ labels: draft
 assignees: ''
 ---
 
+**Draft/Issue de origem:** [Draft]()
+
 **Descrição da Funcionalidade**
+
 ````
 Explique claramente o que você gostaria que fosse adicionado.
 ````
@@ -20,9 +23,8 @@ Liste outras soluções que você já tentou.
 **Informações Adicionais**
 Adicione qualquer detalhe extra ou referência útil.
 
-ISSUES FILHAS
-|Título|Issue Link|
-|--|--|
-|XX|[]()|
-|XX|[]()|
+### ISSUES FILHAS
+- [ ] Filha1
+- [ ] Filha...
+- [ ] FilhaN
 ---
