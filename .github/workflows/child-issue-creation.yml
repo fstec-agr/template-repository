@@ -1,0 +1,27 @@
+name: Create Child Issue
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  create-child-issue:
+    if: contains(github.event.label.name, 'create-child') # Verifica se a label está correta
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Child Issue
+        uses: peter-evans/create-issue@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: "[Subtarefa] Relacionada à Issue #${{ github.event.issue.number }}"
+          body: |
+            ## Descrição
+            Esta subtarefa foi criada automaticamente para a issue pai #${{ github.event.issue.number }}.
+
+            ## Critérios de Aceitação
+            - [ ] Defina os critérios necessários.
+
+            ## Informações Adicionais
+            Adicione informações relevantes.
+
+          labels: subtarefa
